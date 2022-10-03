@@ -23,7 +23,15 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <>
       <Header />
       <main>
-        <Container sx={{ pb: 8 }} maxWidth="md">
+        <Container
+          sx={{
+            pb: 8,
+            background: 'url("/cat_wallpaper.png")',
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+          maxWidth="md"
+        >
           {children}
         </Container>
       </main>
