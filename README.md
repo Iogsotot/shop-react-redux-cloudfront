@@ -1,8 +1,8 @@
 # React-shop-cloudfront
 
-:point_right: <span style="background-color: #FFFF00"> **S3 Bucket** http://my-store-app-dev-serverlessdeploymentbucket-tarhhf1q3mh9.s3-website-eu-west-1.amazonaws.com/ </span>
+:point_right: <span style="background-color: #FFFF00"> **S3 Bucket** http://cats-store-app-dev-serverless-deployment-bucket.s3-website-eu-west-1.amazonaws.com/ </span>
 
-:point_right: <span style="background-color: #FFFF00"> **CloudFront** https://dwt6qh0t4flnu.cloudfront.net/ </span>
+:point_right: <span style="background-color: #FFFF00"> **CloudFront** https://dy2u25c90hnvg.cloudfront.net/ </span>
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
 
