@@ -32,7 +32,7 @@ provider:
 plugins:
   - serverless-finch
   - serverless-single-page-app-plugin
-  # - serverless-s3-cleaner
+  - serverless-s3-cleaner
 
 custom:
   ## Serverless-finch configuration

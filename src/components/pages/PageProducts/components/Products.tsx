@@ -6,12 +6,31 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { formatAsPrice } from "~/utils/utils";
 import AddProductToCart from "~/components/AddProductToCart/AddProductToCart";
-import { useAvailableProducts } from "~/queries/products";
+// import { useAvailableProducts } from "~/queries/products";
+import { useState, useEffect, useCallback } from "react";
 
 export default function Products() {
-  const { data = [], isLoading } = useAvailableProducts();
+  // const { data = [], isLoading } = useAvailableProducts();
+  const [data, setData] = useState<any[]>([]);
+  const fetchData = useCallback(async () => {
+    const data = await fetch(
+      "https://ti85arq6of.execute-api.eu-west-1.amazonaws.com/dev/products",
+      { mode: "cors" }
+    );
 
-  if (isLoading) {
+    console.log(data);
+    const json = await data.json();
+    console.log(json);
+    setData(json);
+  }, []);
+
+  useEffect(() => {
+    fetchData()
+      // make sure to catch any error
+      .catch(console.error);
+  }, [fetchData]);
+
+  if (!data.length) {
     return <Typography>Loading...</Typography>;
   }
 
